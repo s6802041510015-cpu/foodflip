@@ -1,0 +1,24 @@
+{
+  "expo": {
+    "name": "FoodScan Pro",
+    "slug": "foodscan-pro",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "userInterfaceStyle": "light",
+    "ios": {
+      "supportsTablet": false,
+      "infoPlist": {
+        "NSCameraUsageDescription": "FoodScan Pro uses the camera to scan food barcodes.",
+        "NSMotionUsageDescription": "FoodScan Pro uses motion sensors to flip nutrition cards and count gentle movement challenge actions."
+      }
+    },
+    "plugins": [
+      [
+        "expo-camera",
+        {
+          "cameraPermission": "FoodScan Pro uses the camera to scan food barcodes."
+        }
+      ]
+    ]
+  }
+}

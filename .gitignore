@@ -1,0 +1,5 @@
+node_modules/
+.expo/
+dist/
+.expo-export/
+npm-debug.log*
