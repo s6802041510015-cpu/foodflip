@@ -1,4 +1,4 @@
-# FoodScan Pro
+# FoodFlip
 
 An Expo Go app for scanning food barcodes and reviewing nutrition data from Open Food Facts.
 

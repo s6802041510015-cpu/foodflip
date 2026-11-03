@@ -29,7 +29,7 @@ const VOICE_KEY = 'foodscan-pro.voice-enabled.v1';
 const HISTORY_LIMIT = 30;
 
 const DEMO_RAW = {
-  code: 'DEMO-001', product_name: 'FoodScan Demo Snack',
+  code: 'DEMO-001', product_name: 'FoodFlip Demo Snack',
   nutriments: { 'energy-kcal_100g': 240, sugars_100g: 28, sodium_100g: 0.12 },
   nutriscore_grade: 'd',
   ingredients_text: 'Wheat flour, sugar, milk powder, cocoa',
@@ -220,7 +220,7 @@ function Scanner({ permission, requestPermission, cameraError, onCameraFailure, 
       <View style={styles.scannerShade} />
       <SafeAreaView style={styles.scannerContent}>
         <View style={styles.scannerHeader}>
-          <Text style={styles.brandSmall}>FOODSCAN PRO</Text>
+          <Text style={styles.brandSmall}>FOODFLIP</Text>
           <Text style={styles.scannerTitle}>Know your food.</Text>
           <Text style={styles.scannerSubtitle}>Scan a barcode to see nutrition facts</Text>
           <Text style={styles.sectionCaptionLight}>WHAT TO WATCH FOR</Text>
@@ -476,7 +476,7 @@ function DetailScreen({ product, preferences, onToggle, voiceEnabled, onVoiceTog
       <View style={styles.decorCircleOne} /><View style={styles.decorCircleTwo} />
       <ScrollView contentContainerStyle={styles.detailsScroll} showsVerticalScrollIndicator={false}>
         <View style={styles.detailsHeader}>
-          <View><Text style={styles.brandSmallDark}>FOODSCAN PRO</Text>
+          <View><Text style={styles.brandSmallDark}>FOODFLIP</Text>
             <Text style={styles.detailsTitle}>Nutrition, in motion.</Text></View>
           <Text style={styles.detailsCode} selectable>{product.code}</Text>
         </View>
@@ -582,7 +582,7 @@ function HistoryScreen({ history, onOpen, onBack, onClear }) {
   return (
     <SafeAreaView style={styles.historyRoot}>
       <ScrollView contentContainerStyle={styles.historyContent} showsVerticalScrollIndicator={false}>
-        <Text style={styles.brandSmallDark}>FOODSCAN PRO</Text>
+        <Text style={styles.brandSmallDark}>FOODFLIP</Text>
         <Text style={styles.historyTitle}>Scan history</Text>
         <Text style={styles.historySubtitle}>Recent barcodes saved on this device. Rescan for the latest data.</Text>
         {history.length === 0 ? (
@@ -725,7 +725,7 @@ export default function App() {
         const url = `https://world.openfoodfacts.org/api/v2/product/${encodeURIComponent(code)}.json?fields=code,product_name,product_name_en,image_front_url,nutriments,nutriscore_grade,ingredients_text,ingredients_text_en,allergens_tags,quantity,categories_tags`;
         const response = await fetch(url, {
           signal: abort.signal,
-          headers: { 'User-Agent': 'FoodScanPro/1.0 (Expo Go; university mini project)' },
+          headers: { 'User-Agent': 'FoodFlip/1.0 (Expo Go; university mini project)' },
         });
         if (response.status === 404) continue;
         if (!response.ok) throw new Error('HTTP');

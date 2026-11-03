@@ -1,6 +1,6 @@
 {
   "expo": {
-    "name": "FoodScan Pro",
+    "name": "FoodFlip",
     "slug": "foodscan-pro",
     "version": "1.0.0",
     "orientation": "portrait",
@@ -8,17 +8,25 @@
     "ios": {
       "supportsTablet": false,
       "infoPlist": {
-        "NSCameraUsageDescription": "FoodScan Pro uses the camera to scan food barcodes.",
-        "NSMotionUsageDescription": "FoodScan Pro uses motion sensors to flip nutrition cards and count gentle movement challenge actions."
+        "NSCameraUsageDescription": "FoodFlip uses the camera to scan food barcodes.",
+        "NSMotionUsageDescription": "FoodFlip uses motion sensors to flip nutrition cards and count gentle movement challenge actions."
       }
     },
     "plugins": [
       [
         "expo-camera",
         {
-          "cameraPermission": "FoodScan Pro uses the camera to scan food barcodes."
+          "cameraPermission": "FoodFlip uses the camera to scan food barcodes."
         }
       ]
-    ]
+    ],
+    "extra": {
+      "eas": {
+        "projectId": "13d8ec7a-79e6-4ef2-99b1-b31ab0e40b97"
+      }
+    },
+    "android": {
+      "package": "com.katawutn9.foodscanpro"
+    }
   }
 }
